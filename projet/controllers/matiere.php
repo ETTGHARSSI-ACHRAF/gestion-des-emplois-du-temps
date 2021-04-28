@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__."/../models/groupe.php";
+require_once __DIR__."/../models/matiere.php";
 session_start();
-class Groupectlr
+class Matierectlr
 {
     static function Fsession()
     {
@@ -14,7 +14,7 @@ class Groupectlr
         $getsession = self::Fsession();
         if($getsession == true)
         {
-            require_once __DIR__."/../views/groupe.php";
+            require_once __DIR__."/../views/matiere.php";
         }else
         {
             header('location: http://localhost/Brief5/');
@@ -26,7 +26,7 @@ class Groupectlr
         if($getsession == true)
         {
             
-            require_once __DIR__."/../views/AddGroupe.php";
+            require_once __DIR__."/../views/AddMatiere.php";
         }else
         {
             header('location: http://localhost/Brief5/');
@@ -38,13 +38,13 @@ class Groupectlr
         $getsession = self::Fsession();
         if($getsession == true)
         {
-            $groupe = new Groupe();
+            $matiere = new Matiere();
             $i=0;
             while(isset($_POST['name'.$i])){
-                $groupe->creat($_POST['name'.$i],$_POST['capaciter'.$i]);
+                $matiere->creat($_POST['name'.$i]);
                 $i++;
             }
-            header('location:http://localhost/Brief5/groupe');
+            header('location:http://localhost/Brief5/matiere');
             
         }else
         {
@@ -57,9 +57,9 @@ class Groupectlr
     $getsession = self::Fsession();
         if($getsession == true)
         {
-            $groupe=new Groupe();
-            $groupe->delete($id);
-            header('location:http://localhost/Brief5/groupe');
+            $matiere=new Matiere();
+            $matiere->delete($id);
+            header('location:http://localhost/Brief5/matiere');
         }else
         {
             header('location: http://localhost/Brief5/');
@@ -73,16 +73,14 @@ class Groupectlr
         if($getsession == true)
         {
         $name="";
-        $capaciter="";
         $ids="";
-        $groupe=new Groupe();
-       $result = $groupe->selectGroupe($id);
+        $matiere=new Matiere();
+       $result = $matiere->selectMatiere($id);
        foreach($result as $row){
-         $ids=$row['IdG'];  
-        $name=$row['LibelleG'];
-        $capaciter=$row['effectifG'];
+         $ids=$row['IdM'];  
+        $name=$row['LibelleM'];
        }
-       require_once __DIR__."/../views/UpdateGroupe.php";
+       require_once __DIR__."/../views/UpdateMatiere.php";
      
     }else
     {
@@ -97,11 +95,11 @@ class Groupectlr
                 $name=$_POST['name'];
                 $capaciter =$_POST['capaciter'];
                 $id=$_POST['id'];
-            if(isset($_POST['update']) & !empty($name)& !empty($capaciter)){
-                $groupe=new Groupe();
-                $groupe->updateGroupe($id,$name,$capaciter);
+            if(isset($_POST['update']) & !empty($name)){
+                $matiere=new Matiere();
+                $matiere->updateMatiere($id,$name);
             }
-                header('location: http://localhost/Brief5/groupe');
+                header('location: http://localhost/Brief5/matiere');
             
         
     }else
@@ -125,8 +123,8 @@ class Groupectlr
     {   $getsession = self::Fsession();
         if($getsession == true)
         {
-            $groupe=new Groupe();
-            return $groupe-> readAll();
+            $matiere=new Matiere();
+            return $matiere-> readAll();
         }else
         {
             header('location: http://localhost/Brief5/');

@@ -1,0 +1,26 @@
+$color1:#17a2b8;
+.navbar{
+    background-color:$color1;
+    border-radius: 0;
+    border: none;
+    height: 10vh;
+    .navbar-nav{
+        li{
+            
+            a{
+                color: white;
+            }
+             
+            a:hover{
+                border-bottom: 1px solid white;
+                transform: scale(1.1);
+            }
+        }
+           
+        
+    }
+         
+            
+
+    
+}

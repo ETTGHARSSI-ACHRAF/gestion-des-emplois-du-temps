@@ -1,0 +1,21 @@
+body {
+  background-color: #17a2b8;
+}
+
+body h3 {
+  margin-top: 100px;
+  color: white;
+  font-size: 40px;
+}
+
+body .container {
+  background-color: white;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 10px;
+}
+
+body .container #btn {
+  background-color: #17a2b8;
+}
+/*# sourceMappingURL=salleUpdate.css.map */

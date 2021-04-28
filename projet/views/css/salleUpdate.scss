@@ -1,0 +1,19 @@
+$color1:#17a2b8;
+body
+{
+    background-color:$color1;
+    h3{
+        margin-top: 100px;
+        color: white;
+        font-size: 40px;
+    }
+    .container{
+        background-color: white;
+        width: 40vw;
+        height: 60vh;
+        border-radius: 10px;
+        #btn{
+            background-color: $color1;
+        }
+    }
+}
