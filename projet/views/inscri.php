@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1 class="text-center">Inscription</h1>
-    <form method="POST" action="enseignant/creat" >
+    <form method="POST" action="creat" >
         <div class="mb-3 col-10 ms-5 pt-2">
           <label  class="form-label">NOM</label>
           <input type="text" class="form-control input"   name="nom">

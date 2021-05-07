@@ -32,7 +32,7 @@ class Enseignantctlr
     }
     function creat()
     {
-        if(isset($_SESSION['idE']) && !empty($_SESSION['idE'])){
+        
         $nom=$_POST['nom'];
         $prenom=$_POST['prenom'];
         $email=$_POST['email'];
@@ -44,10 +44,7 @@ class Enseignantctlr
             $enseignant->creat($nom,$prenom,$email,$password,$matiere);
             header('location: http://localhost/Brief5/login');   
         }
-        }else
-        {
-            header('location: http://localhost/Brief5/login');
-        }
+        
     }
     
     function delete($id)
