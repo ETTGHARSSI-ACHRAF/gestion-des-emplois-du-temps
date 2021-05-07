@@ -94,8 +94,7 @@ class Groupectlr
     function saveUpdate()
     {   
         $getsession = self::Fsession();
-        if($getsession == true)
-        {
+        if($getsession == true){
                 $name=$_POST['name'];
                 $capaciter =$_POST['capaciter'];
                 $id=$_POST['id'];
