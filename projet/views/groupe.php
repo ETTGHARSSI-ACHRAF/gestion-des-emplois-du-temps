@@ -1,6 +1,4 @@
-<?php
-require_once __DIR__."/../controllers/groupe.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,8 +33,7 @@ require_once __DIR__."/../controllers/groupe.php";
         </thead>
         <tbody>
         <?php
-                        $groupe= new Groupectlr();
-                        $result = $groupe->red();
+                        
                         foreach($result as $row)
                         {
                         ?>

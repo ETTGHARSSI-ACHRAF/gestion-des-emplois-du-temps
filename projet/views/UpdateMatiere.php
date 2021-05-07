@@ -1,6 +1,3 @@
-<?php
-    require_once __DIR__."/../controllers/matiere.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

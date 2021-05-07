@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__."/../models/groupe.php";
-session_start();
+// session_start();
 class Groupectlr
 {
     static function Fsession()
@@ -14,6 +14,8 @@ class Groupectlr
         $getsession = self::Fsession();
         if($getsession == true)
         {
+            $groupe=new Groupe();
+            $result = $groupe-> readAll();
             require_once __DIR__."/../views/groupe.php";
         }else
         {
@@ -109,28 +111,12 @@ class Groupectlr
         header('location: http://localhost/Brief5/');
     }
     }
-    // function close()
-    // {
-    //     $getsession = self::Fsession();
-    //     if($getsession == true)
-    //     {
-    //         header('location: http://localhost/Brief5/salle');
-    // }else
-    // {
-    //     header('location: http://localhost/Brief5/');
-    // }
-    // }
 
-    function red()
-    {   $getsession = self::Fsession();
-        if($getsession == true)
-        {
-            $groupe=new Groupe();
-            return $groupe-> readAll();
-        }else
-        {
-            header('location: http://localhost/Brief5/');
-        }
-    } 
+    // function red()
+    // { 
+    //         $groupe=new Groupe();
+    //         return $groupe-> readAll();
+    // } 
+
 }
 ?>

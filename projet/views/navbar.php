@@ -16,6 +16,7 @@
               </li>
             </ul>
           </div>
+          <a href="login/logaut" class="btn btn-light">déconnecter</a>
         </div>
       </nav>
 

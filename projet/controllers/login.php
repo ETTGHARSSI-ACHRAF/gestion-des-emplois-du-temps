@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__."/../models/user.php";
-session_start();
+require_once __DIR__."/../models/enseignant.php";
+// session_start();
 class Loginctlr
 {
     function index()
@@ -11,23 +12,42 @@ class Loginctlr
     {
         
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password =$_POST['password'];
         $user=new User();
-        $result = $user->read($email,$password);
-        if($result!=''){
+        $result1 = $user->read($email,$password);
+        $enseignat=new Enseignant();
+        $result2 = $enseignat->read($email,$password);
+        if($result1!=''){
             
-            foreach($result as $row)
+            foreach($result1 as $row)
             {
                 $_SESSION['id']=$row['IdUser'];
                 
             }
             header('location: http://localhost/Brief5/salle');
             
+        }elseif($result2!='')
+        {
+            foreach($result2 as $row)
+            {
+                // $_SESSION['enseignant']=$row;
+                $_SESSION['idE']=$row['IdE'];
+                $_SESSION['nomE']=$row['NomE'];
+            }
+            header('location: http://localhost/Brief5/enseignant');
         }else
         {   
             header('location: http://localhost/Brief5/login');
         }
         
+    }
+
+    function logaut()
+    {
+        // echo 'ana hna';
+        session_unset();
+        session_destroy();
+        header('location: http://localhost/Brief5/login');
     }
 }
 

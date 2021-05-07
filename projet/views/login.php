@@ -28,6 +28,9 @@
                             <div class="form-group mt-4">
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Login">
                             </div>
+                            <div class="form-group m-4">
+                                <a href="enseignant/inscription" class="float-end">inscription</a>
+                            </div>
                         </form>
                     </div>
                 </div>

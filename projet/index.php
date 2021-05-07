@@ -1,4 +1,5 @@
 <?php
+session_start();
 $parametrs=explode('/',$_GET['p']);
 // $parametrs[0]='controllers'
 // $parametrs[1]='action'

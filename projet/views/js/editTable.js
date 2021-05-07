@@ -1,0 +1,30 @@
+function edit(e)
+{
+    e.parentNode.parentNode.childNodes[3].childNodes[1].style.display="none";
+    e.parentNode.parentNode.childNodes[3].childNodes[3].style.display="block";
+    e.parentNode.parentNode.childNodes[5].childNodes[1].style.display="none";
+    e.parentNode.parentNode.childNodes[5].childNodes[3].style.display="block";
+    e.parentNode.parentNode.childNodes[7].childNodes[1].style.display="none";
+    e.parentNode.parentNode.childNodes[7].childNodes[3].style.display="block";
+    e.parentNode.parentNode.childNodes[9].childNodes[1].style.display="none";
+    e.parentNode.parentNode.childNodes[9].childNodes[3].style.display="block";
+    e.parentNode.parentNode.childNodes[13].childNodes[1].style.display="none";
+    e.parentNode.parentNode.childNodes[13].childNodes[3].style.display="none";
+    e.parentNode.parentNode.childNodes[13].childNodes[5].style.display="inline-block";
+    e.parentNode.parentNode.childNodes[13].childNodes[7].style.display="inline-block";
+}
+function cansel(e)
+{
+    e.parentNode.parentNode.childNodes[3].childNodes[1].style.display="block";
+    e.parentNode.parentNode.childNodes[3].childNodes[3].style.display="none";
+    e.parentNode.parentNode.childNodes[5].childNodes[1].style.display="block";
+    e.parentNode.parentNode.childNodes[5].childNodes[3].style.display="none";
+    e.parentNode.parentNode.childNodes[7].childNodes[1].style.display="block";
+    e.parentNode.parentNode.childNodes[7].childNodes[3].style.display="none";
+    e.parentNode.parentNode.childNodes[9].childNodes[1].style.display="block";
+    e.parentNode.parentNode.childNodes[9].childNodes[3].style.display="none";
+    e.parentNode.parentNode.childNodes[13].childNodes[1].style.display="inline-block";
+    e.parentNode.parentNode.childNodes[13].childNodes[3].style.display="inline-block";
+    e.parentNode.parentNode.childNodes[13].childNodes[5].style.display="none";
+    e.parentNode.parentNode.childNodes[13].childNodes[7].style.display="none";
+}

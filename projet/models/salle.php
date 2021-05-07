@@ -37,6 +37,7 @@ class Salle
         $this->db->execute();
         return $this->db->selectAll();
     }
+    
     function selectSalle($id)
     {
         $this->id=$id;

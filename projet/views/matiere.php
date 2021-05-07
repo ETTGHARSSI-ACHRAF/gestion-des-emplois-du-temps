@@ -33,8 +33,7 @@ require_once __DIR__."/../controllers/matiere.php";
         </thead>
         <tbody>
                       <?php
-                        $matiere= new Matierectlr();
-                        $result = $matiere->red();
+                       
                         foreach($result as $row)
                         {
                         ?>

@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__."/../models/salle.php";
-session_start();
+// session_start();
 class Sallectlr
 {
     static function Fsession()
@@ -14,6 +14,8 @@ class Sallectlr
         $getsession = self::Fsession();
         if($getsession == true)
         {
+            $salle=new Salle();
+            $result= $salle-> readAll();
             require_once __DIR__."/../views/salle.php";
         }else
         {
@@ -54,7 +56,7 @@ class Sallectlr
     function delet($id)
     {
     
-    $getsession = self::Fsession();
+        $getsession = self::Fsession();
         if($getsession == true)
         {
             $salle=new Salle();
@@ -101,36 +103,16 @@ class Sallectlr
                 $salle=new Salle();
                 $salle->updatesale($id,$name,$capaciter);
             }
-                header('location: http://localhost/Brief5/salle');
-            
-        
+                header('location: http://localhost/Brief5/salle');  
     }else
     {
         header('location: http://localhost/Brief5/');
     }
     }
-    function close()
-    {
-        $getsession = self::Fsession();
-        if($getsession == true)
-        {
-            header('location: http://localhost/Brief5/salle');
-    }else
-    {
-        header('location: http://localhost/Brief5/');
-    }
-    }
-
-    function red()
-    {   $getsession = self::Fsession();
-        if($getsession == true)
-        {
-            $salle=new Salle();
-            return $salle-> readAll();
-        }else
-        {
-            header('location: http://localhost/Brief5/');
-        }
-    } 
+    // function red()
+    // {
+    //         $salle=new Salle();
+    //         return $salle-> readAll();
+    // } 
 }
 ?>

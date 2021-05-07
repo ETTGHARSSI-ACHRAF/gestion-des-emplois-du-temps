@@ -1,0 +1,41 @@
+$color:#17A2B8;
+body{
+    background-color: $color;
+    h1{
+        margin-top: 20px;
+        color: white;
+    }
+    form{
+        padding-top: 10px;
+        border-radius: 10px;
+        background-color: white;
+        width: 50vw;
+        margin-left: 25vw;
+        label{
+            margin-left: 30px;
+            color: $color;
+        }
+        .input{
+            border: none;
+            border-bottom: 1PX solid $color;
+        }
+        input[type=date]{
+            color: $color;
+        }
+        .date{
+            margin-left: 150px;
+            margin-top: 50px;
+        }
+        .btn{
+            background-color: white;
+            color: $color;
+            border: 2px solid $color;
+            border-radius: 20px;
+        }
+        .btn:hover{
+            background-color:$color;
+            color: white;
+            border: 2px solid $color;
+        }
+    }
+}

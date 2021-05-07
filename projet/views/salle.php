@@ -1,6 +1,4 @@
-<?php
-require_once __DIR__."/../controllers/salle.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,9 +34,8 @@ require_once __DIR__."/../controllers/salle.php";
         </thead>
         <tbody>
 
-        <?php
-                        $salle= new Sallectlr();
-                        $result = $salle->red();
+                    <?php
+                        
                         foreach($result as $row)
                         {
                         ?>

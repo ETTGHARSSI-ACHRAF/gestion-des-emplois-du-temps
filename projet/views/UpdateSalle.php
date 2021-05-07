@@ -1,6 +1,4 @@
-<?php
-    require_once __DIR__."/../controllers/salle.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

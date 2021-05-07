@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__."/../models/matiere.php";
-session_start();
+// session_start();
 class Matierectlr
 {
     static function Fsession()
@@ -14,6 +14,8 @@ class Matierectlr
         $getsession = self::Fsession();
         if($getsession == true)
         {
+            $matiere=new Matiere();
+            $result = $matiere-> readAll();
             require_once __DIR__."/../views/matiere.php";
         }else
         {
@@ -107,28 +109,13 @@ class Matierectlr
         header('location: http://localhost/Brief5/');
     }
     }
-    // function close()
-    // {
-    //     $getsession = self::Fsession();
-    //     if($getsession == true)
-    //     {
-    //         header('location: http://localhost/Brief5/salle');
-    // }else
-    // {
-    //     header('location: http://localhost/Brief5/');
-    // }
-    // }
 
-    function red()
-    {   $getsession = self::Fsession();
-        if($getsession == true)
-        {
-            $matiere=new Matiere();
-            return $matiere-> readAll();
-        }else
-        {
-            header('location: http://localhost/Brief5/');
-        }
-    } 
+    // function red()
+    // {   
+    //         $matiere=new Matiere();
+    //         return $matiere-> readAll();
+    // } 
+
+ 
 }
 ?>
