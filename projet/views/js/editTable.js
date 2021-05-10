@@ -1,30 +1,32 @@
 function edit(e)
 {
-    e.parentNode.parentNode.childNodes[3].childNodes[1].style.display="none";
-    e.parentNode.parentNode.childNodes[3].childNodes[3].style.display="block";
-    e.parentNode.parentNode.childNodes[5].childNodes[1].style.display="none";
-    e.parentNode.parentNode.childNodes[5].childNodes[3].style.display="block";
-    e.parentNode.parentNode.childNodes[7].childNodes[1].style.display="none";
-    e.parentNode.parentNode.childNodes[7].childNodes[3].style.display="block";
-    e.parentNode.parentNode.childNodes[9].childNodes[1].style.display="none";
-    e.parentNode.parentNode.childNodes[9].childNodes[3].style.display="block";
-    e.parentNode.parentNode.childNodes[13].childNodes[1].style.display="none";
-    e.parentNode.parentNode.childNodes[13].childNodes[3].style.display="none";
-    e.parentNode.parentNode.childNodes[13].childNodes[5].style.display="inline-block";
-    e.parentNode.parentNode.childNodes[13].childNodes[7].style.display="inline-block";
+    document.getElementById('dateLabel'+e).style.display="none";
+    document.getElementById('date'+e).style.display="block";
+    document.getElementById('dureLabel'+e).style.display="none";
+    document.getElementById('dure'+e).style.display="block";
+    document.getElementById('groupelabel'+e).style.display="none";
+    document.getElementById('groupe'+e).style.display="block";
+    document.getElementById('sallelabel'+e).style.display="none";
+    document.getElementById('salle'+e).style.display="block";
+    document.getElementById('btnedit'+e).style.display="none";
+    document.getElementById('btndelet'+e).style.display="none";
+    document.getElementById('btnsave'+e).style.display="inline-block";
+    document.getElementById('btncansel'+e).style.display="inline-block";
+    
 }
 function cansel(e)
 {
-    e.parentNode.parentNode.childNodes[3].childNodes[1].style.display="block";
-    e.parentNode.parentNode.childNodes[3].childNodes[3].style.display="none";
-    e.parentNode.parentNode.childNodes[5].childNodes[1].style.display="block";
-    e.parentNode.parentNode.childNodes[5].childNodes[3].style.display="none";
-    e.parentNode.parentNode.childNodes[7].childNodes[1].style.display="block";
-    e.parentNode.parentNode.childNodes[7].childNodes[3].style.display="none";
-    e.parentNode.parentNode.childNodes[9].childNodes[1].style.display="block";
-    e.parentNode.parentNode.childNodes[9].childNodes[3].style.display="none";
-    e.parentNode.parentNode.childNodes[13].childNodes[1].style.display="inline-block";
-    e.parentNode.parentNode.childNodes[13].childNodes[3].style.display="inline-block";
-    e.parentNode.parentNode.childNodes[13].childNodes[5].style.display="none";
-    e.parentNode.parentNode.childNodes[13].childNodes[7].style.display="none";
+    document.getElementById('dateLabel'+e).style.display="block";
+    document.getElementById('date'+e).style.display="none";
+    document.getElementById('dureLabel'+e).style.display="block";
+    document.getElementById('dure'+e).style.display="none";
+    document.getElementById('groupelabel'+e).style.display="block";
+    document.getElementById('groupe'+e).style.display="none";
+    document.getElementById('sallelabel'+e).style.display="block";
+    document.getElementById('salle'+e).style.display="none";
+    document.getElementById('btnedit'+e).style.display="inline-block";
+    document.getElementById('btndelet'+e).style.display="inline-block";
+    document.getElementById('btnsave'+e).style.display="none";
+    document.getElementById('btncansel'+e).style.display="none";
+
 }

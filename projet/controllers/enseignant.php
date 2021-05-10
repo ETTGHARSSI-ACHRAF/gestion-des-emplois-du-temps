@@ -162,6 +162,7 @@ function update()
         $idC=$_POST['idc'];
         $capaciterS='';
         $effectifG='';
+        
     if(isset($_POST['update']) && !empty($idS) && !empty($idG) && !empty($dure) && !empty($date))
         {
         if($date>=$jour)
@@ -188,6 +189,7 @@ function update()
                     {
                         $enseignant->updateReservation($idS,$idG,$idE,$date,$dure,$idC);
                         header('location:http://localhost/Brief5/enseignant');
+                        
                     }else
                     {
                         // echo '<script>alert("la capasiter de cette salle est moin de effectif de ce groupe")</script>';

@@ -34,6 +34,7 @@
        
         <tbody>
             <?php
+            $i=0;
                 foreach($result as $row){
             ?> 
             <form action="enseignant/update" method="post">
@@ -43,12 +44,12 @@
                 <input type="hidden" name="idc" value="<?=$row['IdC']?>">
             </td>
             <td>
-                <label><?=$row['DateC']?></label>
-                <input type="date" name="date" value="<?=$row['DateC']?>" style="display:none">
+                <label id="dateLabel<?=$i?>"><?=$row['DateC']?></label>
+                <input type="date" id="date<?=$i?>" name="date" value="<?=$row['DateC']?>" style="display:none">
             </td>
             <td>
-                <label><?=$row['DureC']?></label>
-                <select class="form-select input" name="dure" style="display:none">
+                <label id="dureLabel<?=$i?>"><?=$row['DureC']?></label>
+                <select class="form-select input" id="dure<?=$i?>" name="dure" style="display:none">
                     <option ></option>
                     <option value="8">8-10</option>
                     <option value="10">10-12</option>
@@ -57,8 +58,8 @@
                   </select>
             </td>
             <td>
-                <label><?=$row['LibelleG']?></label>
-                <select class="form-select input" name="groupe" style="display:none">
+                <label id="groupelabel<?=$i?>"><?=$row['LibelleG']?></label>
+                <select class="form-select input" name="groupe" id="groupe<?=$i?>" style="display:none">
                 <option></option>
                         <?php
                         
@@ -73,8 +74,8 @@
                 </select>
             </td>
             <td>
-                <label><?=$row['LibelleS']?></label>
-                <select class="form-select input" name="salle" style="display:none">
+                <label id="sallelabel<?=$i?>"><?=$row['LibelleS']?></label>
+                <select class="form-select input" name="salle" id="salle<?=$i?>" style="display:none">
                         <option></option>
                         <?php
                         foreach($result5 as $row2)
@@ -88,12 +89,13 @@
             </td>
             <td><label><?=$row['effectifG']?></label></td>
             <td class="text-center">
-                <a class='btn btn-info btn-xs' onclick='edit(this)' > Edit</a> <a href="enseignant/delete/<?=$row['IdC']?>" class="btn btn-danger btn-xs"> Del</a>
-                <input type="submit" class='btn btn-success btn-xs' name="update" value="Save" style="display:none"> <a onclick="cansel(this)" class="btn btn-warning btn-xs" style="display:none">Cansel</a>
+                <a class='btn btn-info btn-xs' onclick='edit(<?=$i?>)' id="btnedit<?=$i?>"> Edit</a> <a href="enseignant/delete/<?=$row['IdC']?>" id="btndelet<?=$i?>" class="btn btn-danger btn-xs"> Del</a>
+                <input type="submit" class='btn btn-success btn-xs' id="btnsave<?=$i?>" name="update" value="Save" style="display:none"> <a onclick="cansel(<?=$i?>)" class="btn btn-warning btn-xs" id="btncansel<?=$i?>"style="display:none">Cansel</a>
             </td>
             </tr>
             </form>
             <?php
+            $i++;
                 }
             ?>
          </tbody>
