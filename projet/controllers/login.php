@@ -37,6 +37,7 @@ class Loginctlr
             header('location: http://localhost/Brief5/enseignant');
         }else
         {   
+            $_SESSION['erreurLogin']="<strong>Erreur!</strong> Login ou mot de passe incorrecte !";
             header('location: http://localhost/Brief5/login');
         }
         
@@ -44,7 +45,6 @@ class Loginctlr
 
     function logaut()
     {
-        // echo 'ana hna';
         session_unset();
         session_destroy();
         header('location: http://localhost/Brief5/login');

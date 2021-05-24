@@ -28,9 +28,20 @@
                             <div class="form-group mt-4">
                                 <input type="submit" name="submit" class="btn btn-info btn-md" value="Login">
                             </div>
+                            <?php
+
+                                            if(isset($_SESSION['erreurLogin']) && !empty($_SESSION['erreurLogin'])){
+                                                echo'<div class="alert alert-danger mt-3">'.$_SESSION['erreurLogin'].'</div>';
+                                            }
+                                            session_destroy();
+                                            ?>
+
+                                            
+                            
                             <div class="form-group m-4">
                                 <a href="enseignant/inscription" class="float-end">inscription</a>
                             </div>
+                            
                         </form>
                     </div>
                 </div>

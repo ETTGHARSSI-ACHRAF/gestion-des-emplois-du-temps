@@ -5,7 +5,7 @@ function add(){
     var lebelle = document.getElementById("lebelle");
     if( lebelle.value!='')
     {
-        form.innerHTML+=' <div class="result d-flex justify-content-center" ><div class="form-group col-3 m-2"><input type="text" class="form-control" value="'+lebelle.value+'" name="name'+i+'" ></div></div>';
+        form.innerHTML+=' <div class="result d-flex " ><div class="form-group col-3 m-2"><input type="text" class="form-control" value="'+lebelle.value+'" name="name'+i+'" ></div></div>';
         i++;
     }else
     {

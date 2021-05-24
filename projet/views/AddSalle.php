@@ -8,19 +8,21 @@
   <title>Salle</title>
 </head>
 <body>
-  <h1 class="text-center mt-5 mb-5" >ajoueter les salles</h1>
-  <form action="saveAdd" method="post" id="form">
-  <div class="content d-flex justify-content-center" >
-    <div class="form-group col-3 m-2">
-      <input type="text" class="form-control" id="lebelle" placeholder="Lebeller"  >
+  <div class="container " >
+    <h1 class="text-center mt-5 mb-5" >ajouter les salles</h1>
+    <form action="saveAdd" method="post" id="form" style="margin-left:300px">
+    <div class="content d-flex "  >
+      <div class="form-group col-3 m-2">
+        <input type="text" class="form-control" id="lebelle" placeholder="Lebeller"  >
+      </div>
+      <div class="form-group col-3 m-2">
+        <input type="number"    id="capaciter" class="form-control" placeholder="Capaciter" >
+      </div>
+      <button class="btn btn-primary m-2" onclick="add()">+</button>
+      <input type="submit" value="ADD" class="btn btn-primary m-2">
     </div>
-    <div class="form-group col-3 m-2">
-      <input type="number"    id="capaciter" class="form-control" placeholder="Capaciter" >
-    </div>
-    <button class="btn btn-primary m-2" onclick="add()">+</button>
-    <input type="submit" value="ADD" class="btn btn-primary m-2">
+    </form>
   </div>
-</form>
 </body>
 <script src="http://localhost/Brief5/views/js/liste.js"></script>
 </html>
